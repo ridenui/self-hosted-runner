@@ -82,6 +82,6 @@ npm install --global yarn
 
 echo "Setup for ruby/setup-ruby@v1"
 
-sudo mkdir -p /opt/hostedtoolcache
+sudo mkdir -p /Users/runner/hostedtoolcache
 
-sudo chown -R `whoami`:staff /opt/hostedtoolcache
+sudo chown -R `whoami`:staff /Users/runner/hostedtoolcache
