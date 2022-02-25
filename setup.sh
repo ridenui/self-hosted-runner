@@ -6,6 +6,10 @@ echo "Turn off Spotlight indexing"
 
 sudo mdutil -a -i off
 
+echo "Disable swap"
+
+sudo nvram boot-args="vm_compressor=2"
+
 echo "Install homebrew"
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -75,3 +79,9 @@ nvm install v16
 echo "Install yarn"
 
 npm install --global yarn
+
+echo "Setup for ruby/setup-ruby@v1"
+
+sudo mkdir -p /opt/hostedtoolcache
+
+sudo chown -R `whoami`:staff /opt/hostedtoolcache
